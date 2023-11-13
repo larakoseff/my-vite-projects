@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react"
+import boxes from "./boxes.jsx"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+export default function App() {
+    const [squares, setSquares] = React.useState(boxes)
+    
+    const squareElements = squares.map(square => (
+        <div className="box" key={square.id}></div>
+    ))
+    /**
+     * Challenge part 1:
+     * 1. Initialize state with the default value of the
+     *    array pulled in from boxes.js
+     * 2. Map over that state array and display each one
+     *    as an empty square (black border, transparent bg color)
+     *    (Don't worry about using the "on" property yet)
+     */
+    return (
+        <main>
+            {squareElements}
+        </main>
+    )
 }
-
-export default App
