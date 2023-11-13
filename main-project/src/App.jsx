@@ -1,18 +1,20 @@
 import React from "react"
-import boxes from "./boxes.jsx"
-import Box from "./Box.jsx"
+import Joke from "./Joke.jsx"
+import jokesData from "./jokesData.jsx"
 
-export default function App(props) {
-    
-        const [squares, setSquares] = React.useState(boxes)
-        
-        const squareElements = squares.map(square => (
-            <Box key={square.id} on={square.on} />
-        ))
+export default function App() {
+    const jokeElements = jokesData.map(joke => {
+        return (
+            <Joke 
+                key={joke.id}
+                setup={joke.setup} 
+                punchline={joke.punchline} 
+            />
+        )
+    })
     return (
-        <main>
-            {squareElements}
-        </main>
+        <div>
+            {jokeElements}
+        </div>
     )
 }
-
