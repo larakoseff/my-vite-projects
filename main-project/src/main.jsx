@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Form from "./Form.jsx";
-import "./index.css";
+import { StrictMode } from 'react'
+import ReactDOM from 'react-dom/client'
+import { App } from "./components/App"
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Form />
-  </React.StrictMode>
-);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
