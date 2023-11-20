@@ -12,7 +12,7 @@ const StyledTextField = styled(TextField)`
 `;
 
 const StyledButton = styled(Button)`
-  margin: 1rem;
+  margin: 1.5rem;
   background: #26ffe6;
   color: black;
   font-family: "Karla", sans-serif;
@@ -53,7 +53,7 @@ export const App = () => {
     <>
       <div className="red-button">
         <form onSubmit={formSubmit}>
-          <StyledTextField label="New Task" name="title" variant="filled" />
+          <StyledTextField label="Enter New Task Here" name="title" variant="filled" />
           <StyledButton type="submit" size="large" variant="contained">
             SAVE
           </StyledButton>

@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Karla", sans-serif;
 }
 
 body {
@@ -7,8 +8,7 @@ body {
     padding: 20px;
 }
 
-input {
-    font-family: Arial, Helvetica, sans-serif;
+input[type="text"], input[type="email"] {
     margin-bottom: 15px;
     height: 30px;
     text-indent: 10px;
@@ -17,11 +17,15 @@ input {
     display: block;
 }
 
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 0.75rem;
+}
+
 textarea {
-    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
-    text-indent: 10px;
     border: 1px solid #444;
     border-radius: 5px;
     display: block;
+    text-indent: 10px;
+    
 }

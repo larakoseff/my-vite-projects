@@ -1,8 +1,26 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
+    background-color: #FF7C43;
+    color: white;
     margin: 0;
-    font-family: "Karla", sans-serif;
-  }
+    padding: 2rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
